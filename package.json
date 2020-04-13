@@ -1,0 +1,18 @@
+{
+  "name": "statistics-board-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd statistics-board-client && npm start",
+    "server": "cd statistics-board-server && node server",
+    "start": "concurrently --kill-others \"npm run server\" \"npm run client\"",
+    "postinstall": "(cd couchbase-gql-server && npm install); (cd react-apollo-client && npm install);"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.1.0"
+  }
+}
